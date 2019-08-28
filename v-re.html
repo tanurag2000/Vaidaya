@@ -1,0 +1,320 @@
+<html>
+<head>
+	<!--Import Google Icon Font-->
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	<!--Import materialize.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Sign up</title>
+	
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+	
+	<style>
+	body{
+		background-color:#0a5f7b;
+	} 
+    </style>
+</head>
+<body>
+  <body id="home" class="scrollspy">
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+      <nav class="teal">
+        <div class="container">
+        
+            <a href="#" class="brand-logo">Vaidya</a>
+          
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#search">Search</a>
+              </li>
+              <li>
+                <a href="reports.html">Reports</a>
+              </li>
+              <li>
+                <a href="#gallery">Sign out</a>
+              </li>
+              
+            </ul>
+          </div>
+     
+      </nav>
+    </div>
+    
+	<div class="row container">
+	<div class="col l1 m1 s12"></div>
+	<div class="col l10 m10 s12">
+		<form name="myForm"  onsubmit="return validateForm();" method="POST" action="pronre.php">
+		 <div class="card-panel z-depth-5">
+			
+			<h5 class="center">Register</h5>
+			<p class="center">Join to our community now !</p>
+			
+			
+			<div class="input-field">
+				<i class="material-icons prefix">account_circle</i>
+				<input type="text" id="Name" name="Name" required>
+				<label class="active" for="Name">Name</label>
+			</div>
+	
+			<div class="input-field">
+				<i class="material-icons prefix">email</i>
+				<input type="email" id="Email" name="Email" required>
+				<label class="active" for="Email">Email Address</label>
+			</div>
+			  
+			<div class="input-field">
+				<i class="material-icons prefix">local_phone</i>
+				<input type="number" id="PhoneNo" name="PhoneNo" min="000000000" max="9999999999" required>
+				<label class="active" for="PhoneNo">Mobile No.</label>
+			</div>
+			  
+				
+			<div class="input-field">
+				<i class="material-icons prefix">lockq</i>
+				<input type="password" id="pwd" name="pwd" required>
+				<label class="active" for="pwd">Password</label>
+			</div>
+			
+			<div class="input-field">
+				<i class="material-icons prefix">vpn_key</i>
+				<input type="password" id="npwd" name="pass2">
+				<label for="npwd">Confirm password</label>
+			</div>
+				  
+			<div class="row">
+				<h5><i class="material-icons prefix">home</i>Address</h5>
+			</div>
+			
+			<div class="container">
+				<div class="row input-field col s8">
+					<select name="stateslist">
+						<option value="" disabled selected>Select State</option>
+						<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+						<option value="Andhra Pradesh">Andhra Pradesh</option>
+						<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+						<option value="Assam">Assam</option>
+						<option value="Bihar">Bihar</option>
+						<option value="Chandigarh">Chandigarh</option>
+						<option value="Chhattisgarh">Chhattisgarh</option>
+						<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+						<option value="Daman and Diu">Daman and Diu</option>
+						<option value="Delhi">Delhi</option>
+						<option value="Goa">Goa</option>
+						<option value="Gujarat">Gujarat</option>
+						<option value="Haryana">Haryana</option>
+						<option value="Himachal Pradesh">Himachal Pradesh</option>
+						<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+						<option value="Jharkhand">Jharkhand</option>
+						<option value="Karnataka">Karnataka</option>
+						<option value="Kerala">Kerala</option>
+						<option value="Lakshadweep">Lakshadweep</option>
+						<option value="Madhya Pradesh">Madhya Pradesh</option>
+						<option value="Maharashtra">Maharashtra</option>
+						<option value="Manipur">Manipur</option>
+						<option value="Meghalaya">Meghalaya</option>
+						<option value="Mizoram">Mizoram</option>
+						<option value="Nagaland">Nagaland</option>
+						<option value="Orissa">Orissa</option>
+						<option value="Pondicherry">Pondicherry</option>
+						<option value="Punjab">Punjab</option>
+						<option value="Rajasthan">Rajasthan</option>
+						<option value="Sikkim">Sikkim</option>
+						<option value="Tamil Nadu">Tamil Nadu</option>
+						<option value="Tripura">Tripura</option>
+						<option value="Uttaranchal">Uttaranchal</option>
+						<option value="Uttar Pradesh">Uttar Pradesh</option>
+						<option value="West Bengal">West Bengal</option>
+					</select>
+				</div>
+				
+				<div class="input-field col s8">
+					<input type="text" name="City" id="City" required>
+					<label class="active" for="City">Enter city</label>
+				</div>
+				
+				<div class="input-field col s8">
+					<input type="text" name="pincode" id="pincode" required>
+					<label class="active" for="pincode">Pincode</label>
+				</div>
+			</div>
+			
+			<div class="row input-field col s12">			
+				<select name="age">
+					<option value="" disabled selected>Age Group</option>
+					<option value="18"> </option>
+					<option value="18_24"> 18-24 </option>
+					<option value="24_30"> 24-30 </option>
+					<option value="30_35"> 30-35 </option>
+					<option value="35_45"> 35-45 </option>
+					<option value="45>"> 45> </option>
+				</select>
+				<label>Age Group</label>
+			</div>
+			
+			<div class="row input-field col s12">			
+				<select name="qualification">
+					<option value="" disabled selected> Select Qualification </option>
+					<option value="Non_educated"> Non Educated </option>
+					<option value="10th"> 10th Passed</option>
+					<option value="12th"> 12th Passed </option>
+					<option value="Under_Graduation"> Under Graduation </option>
+					<option value="Post_Graduation"> Post Graduation </option>
+					<option value="P_hd"> P.hd </option>
+				</select>
+				<label>Qualification</label>
+			</div>
+			
+			<div class="row input-field col s12">
+				<select name="business[]" multiple>
+					<option value="" disabled="disabled" selected="selected">Type of Business</option>
+					<option value="Trading">Trading</option>
+					<option value="Service">Service</option>
+					<option value="Manufracturing">Manufracturing</option>
+					<option value="New_To_Business"> New To Business </option>
+				</select>
+				<label>Type of Business</label>
+			</div>				
+
+			<p class="left">					
+				Already have an account? <a href="log.php" class="modal-trigger">login</a>
+			</p>
+			<p class='right'>
+				By signing up you agree to our <a href='tns.php'>terms & privacy policy</a>
+			</p>
+			<input type="submit" name="sign_up" value="yes" class="btn left col s12">
+
+			<div class="clearfix"></div>
+		</div>
+	</form> 
+	</div>
+	</div>
+	</div>
+	<script>
+		$(document).ready(function() {
+			// Init Select
+			$('select').material_select();
+			
+			// Init Sidenav
+			$('.button-collapse').sideNav();
+		});
+	</script>
+</body>
+<!-- FOOTER PLACE -->
+	<footer class="page-footer" style="background-color : darkgrey!important;">
+<div>
+	<div class="row">
+	
+	<div class="col l1"></div>
+
+<!-- About us -->
+		<div class="col s11 l3" class="scrollspy" >
+			<h5 class="white-text">
+				About Us
+			</h5>
+			<p class="grey-text text-lighten-4">
+				Aa! Vyapaar Kar le!! Is social initiative of Aagan Foundation, for empowering entrepreneurs 
+				by providing them solution of all type of problems occur in their business.
+			</p>
+		</div>
+		
+	<div class="col s0 l1"></div>
+	
+<!-- SITE MAP -->
+		<div class="col s4 l2">
+			<h5 class="white-text">Site Map</h5>
+			<ul>
+				<li>
+					<a class="waves-effect waves-light grey-text text-lighten-3" href="qa.php">
+						Q & A
+					</a>
+				</li>
+				<li>
+					<a class="waves-effect waves-light grey-text text-lighten-3" href="tns.php">
+						Privacy Policy
+					</a>
+				</li>
+				<li>
+					<a class="waves-effect waves-light grey-text text-lighten-3" href="tns.php">
+						Terms & Conditions
+					</a>
+				</li>
+				<li>
+					<a class="waves-effect waves-light grey-text text-lighten-3" href="#!">
+						Web Partner
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+<!-- LIBRARY -->
+		<div class="col s3 l2">
+			<h5 class="white-text">Library</h5>
+			<ul>
+				<li>
+					<a class="waves-effect waves-light grey-text text-lighten-3" href="lib.php/#vid">
+						Videos
+					</a>
+				</li>
+				<li>
+					<a class="waves-effect waves-light grey-text text-lighten-3" href="lib.php/#art">
+						Articals
+					</a>
+				</li>
+				<li>
+					<a class="waves-effect waves-light grey-text text-lighten-3" href="lib.php/#ppt">
+						PPTs
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+<!-- FOLLOW US -->
+		<div class="col s4 l2">
+			<h5 class="white-text">Follow Us</h5>
+			<ul>
+				<li>
+					<a class="waves-effect waves-light grey-text text-lighten-3" href="#!">
+						Facebook
+					</a>
+				</li>
+				<li>
+					<a class="waves-effect waves-light grey-text text-lighten-3" href="https://www.youtube.com/channel/UC7ZqFjStjEueoy1NTxLBBFQ">
+						YouTube
+					</a>
+				</li>
+				<li>
+					<a class="waves-effect waves-light grey-text text-lighten-3" href="#!">
+						Instagram
+					</a>
+				</li>
+				<li>
+					<a class="waves-effect waves-light grey-text text-lighten-3" href="#!">
+						Twitter
+					</a>
+				</li>
+			</ul>
+		</div>
+		</div>
+	</div>
+	<div class="footer-copyright" style="background-color : #001626;">
+		<div class="container center-align">
+		    <!--<img src="img/Flag_of_India.svg" height="15px" width="15px"/>
+		        &nbsp&nbsp&nbsp&nbsp-->
+		            © 2019 Copyright Aa Vyapaar Kar Le
+	        <!--
+    	        &nbsp&nbsp&nbsp&nbsp  
+    		    <img src="img/Flag_of_India.svg" height="15px" width="15px"/>
+		    -->
+		</div>
+	</div>
+</footer></html>

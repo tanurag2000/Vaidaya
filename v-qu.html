@@ -1,0 +1,86 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+ 	<title></title>
+ 	<style type="text/css">
+ 		.ques{
+    margin-top: 50px;
+	border: 5px solid skyblue ;
+	min-width: 90%;
+	height: 550px;
+
+    }
+        .ques h1{
+    margin-top: 0;
+    padding: 2px 5px 0px 5px;
+	color: #fff;
+	text-align: left;
+	background-color: blue;
+	border-bottom: 5px solid skyblue;
+
+	}
+	.ques h3{
+		 margin-left: 80px;
+		font-size: 28px;
+	}
+   .ques form textarea
+   {
+   	 padding-left: 24px;
+     
+   	 font-size: 18px;
+   	  width: 80%;
+   	  margin-left: 80px;
+   	  border: 5px solid skyblue ;
+   }
+   .ques form select
+   { 
+   	  margin-top: 30px;
+   	  font-size: 21px;
+   	  max-width: 20%;
+   	  height: 40%;
+   	  margin-left: 80px;
+   	  border: 5px solid skyblue ;
+   }
+   .ques form input[type="submit"]
+   {
+   	  margin-top: 30px;
+   	  font-size: 21px;
+   	  float:right;
+   	  margin-right: 200px;
+   	  border: 5px solid skyblue ;
+   }
+ 	</style>
+    
+    
+</head>
+		<body>
+			<!--create form for asking the question -->
+			 <div class="ques">
+			 	<h1>Ask A Question</h1>
+			 	  <h3>Get Answers of your questions within 48 hours</h3>
+			 	   <!-- go to the page askques.php -->
+			 	  <form method="POST"  onsubmit="return validate()" action="UAQ.php">
+			 	  	<textarea placeholder="Write your questions here...." rows="5" name="question" id="" > </textarea>
+			 	    <select id="" name="category">
+						<option value="">Select Category</option>
+						<option value="no_domain"> No Domain </option>
+					</select>
+					<input type="submit" name="askq" value="Ask questions">
+			 	  </form>
+			 	  
+		  </div>
+		</body>
+		<script>
+		
+		function validate() {
+  var x = document.forms["myForm"]["question"].value;
+ 
+    
+     if (x.length>10 ) 
+          {
+    alert("Question must in 100 words");
+    return false;
+          }
+		
+		</script>
+</html>  
